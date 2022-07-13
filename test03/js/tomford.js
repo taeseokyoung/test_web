@@ -1,7 +1,14 @@
 $(function () {
 
     $(window).scroll(function () {
-        $('.header_fixed').addClass('on')
+        var sct = $(window).scrollTop();
+        if (sct > 10) {
+            $('.header_fixed').addClass('on')
+        }
+        else {
+            $('.header_fixed').removeClass('on')
+        }
+
     })
 
     $('.main_video').YTPlayer({
