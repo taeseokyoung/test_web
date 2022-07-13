@@ -1,0 +1,622 @@
+/* 22.06.26.~ tae 첫번째. 건축 홈페이지*/
+
+/* * {
+    outline: 1px solid #f00;
+} */
+
+img {
+    max-width: 100%;
+}
+
+.Wrap {}
+
+#header {
+    /* display: block; */
+}
+
+#header .container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#header .container .navWrap {
+    width: 1200px;
+    line-height: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+#header .navWrap h1 #header .navWrap a {
+    padding: 0 auto 0 0;
+}
+
+#header .navWrap img:nth-child(1) {
+    width: 35px;
+    margin: 0 5px 0 0;
+}
+
+.navWrap .headerTab {
+    display: flex;
+}
+
+#header .headerTab ul {
+    display: flex;
+    gap: 40px;
+}
+
+#header .headerTab ul>li {
+    font-size: 17px;
+    font-weight: 500px;
+    color: #ddd;
+}
+
+#header .headerTab .headerArea {
+    /* a태그 사이에 마진을 줬다. */
+    font-size: 13px;
+    font-weight: 300px;
+    color: #ddd;
+}
+
+#header .headerTab .headerArea::before {
+    content: "";
+    display: inline-block;
+    /* 2. 왜 li-a 와 그냥 a 간격이 다를까 속성에 차이가 있는거 같다 */
+    margin: 0 20px;
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+    vertical-align: middle;
+}
+
+#header .container .headerTab .headerArea::after {
+    content: "";
+    display: inline-block;
+    /* 윗 마진이 안먹는다 아래마진은 먹는다. 중간으로 더 맞춰주고 싶은데 잘 모르겠다..*/
+    /* margin: 30px 20px 0 20px; */
+    margin: 0 20px;
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+    vertical-align: middle;
+}
+
+#header .container .headerTab .headerArea a~a {
+    margin: 0 0 0 30px;
+
+}
+
+#header button {
+    border: none;
+    background: transparent;
+    color: #ddd;
+    font-size: 23px;
+
+}
+
+#header button i {
+    vertical-align: -13%;
+}
+
+
+/* 2022.06.24 tae main slide ~ 06.29  tae 메인텍스트 작성 */
+
+#main .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main .main_txt h2 {
+    position: absolute;
+    top: 30%;
+    font-size: 65px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 999;
+    line-height: 1.2;
+}
+
+#main .main_txt p {
+    position: absolute;
+    top: 55%;
+    font-size: 17px;
+    font-weight: 100;
+    color: #fff;
+    z-index: 999;
+    line-height: 1.2;
+}
+
+#main .main_slider figure {
+    height: 970px;
+}
+
+#main .main_slider .itm01 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+#main .main_slider .itm02 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+#main .main_slider .itm03 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+/* 22.06.28.scrollme */
+#main .scrollMe {
+    padding: 100px 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main .scrollMe h3 {
+    font-size: 45px;
+    font-weight: 700;
+    padding: 0 0 20px 0;
+}
+
+#main .scrollMe>p {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+}
+
+
+.scrollMe .scrollme {
+    display: flex;
+    gap: 30px;
+}
+
+.scrollMe .scrollme figure {}
+
+.scrollMe .scrollme figure:nth-child(1) {
+    margin: 200px 0 0 0;
+}
+
+.scrollMe .scrollme figure:nth-child(2) {
+    margin: 100px 0 0 0;
+}
+
+.scrollMe .scrollme figure img {
+    padding: 0 0 10px 0;
+}
+
+.scrollMe .scrollme .text h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.scrollMe .scrollme .text p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/* 22.06.27. tae top slider */
+#main .businessSlider {
+    padding: 0 0 100px 0;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.businessSlider figure {
+    padding: 0 15px;
+}
+
+.businessSlider figure .slide_image {
+    display: flex;
+}
+
+.businessSlider figure.slick-current .box {
+    display: block;
+    width: 300px;
+    height: 500px;
+    background: #fff;
+}
+
+.slide_image .box {
+    padding: 50px 50px 50px 20px;
+}
+
+.slide_image h4 {
+    font-size: 31px;
+    font-weight: 700;
+    margin: 0 0 140px 0;
+}
+
+.slide_image p:nth-of-type(1) {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.slide_image p:nth-of-type(2) {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: 0 0 100px 0;
+
+}
+
+.slide_image .box .button {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #888;
+    padding: 6px 0 0 0;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+.businessSlider figure.slick-current img:nth-of-type(1) {
+    display: none;
+    filter: grayscale(1);
+}
+
+.businessSlider figure.slick-current img:nth-of-type(2) {
+    display: block;
+    filter: grayscale(0);
+}
+
+.businessSlider figure .box {
+    display: none;
+}
+
+.businessSlider figure img:nth-of-type(1) {
+    display: block;
+    filter: grayscale(1);
+}
+
+.businessSlider figure img:nth-of-type(2) {
+    display: none;
+    filter: grayscale(0);
+}
+
+.slide_arrows>i {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    color: rgba(255, 255, 255, 0.5);
+    /* color: #111; */
+    font-size: 40px;
+
+}
+
+.slide_arrows>i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.slide_arrows>i:nth-child(1) {
+    margin: 0 0 0 -700px;
+}
+
+.slide_arrows>i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
+.slide_arrows>i.on {
+    color: #fff;
+}
+
+/* 22.06.27. tae villiv_banner */
+
+.villiv_banner {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+
+.villiv_banner .villiv_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.villiv_banner h3 {
+    width: 150px;
+    margin: 0 auto 30px auto;
+}
+
+
+.villiv_banner p {
+    font-size: 17px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 auto;
+}
+
+/* 22.06.28. tae bottom */
+.bottom {
+    padding: 100px 0 40px 0;
+}
+
+.bottom .container {
+    padding: 40px;
+    width: 1200px;
+    margin: 0 auto;
+    background: #f7f7f7;
+
+}
+
+.bottom .news_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .news_title h4 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.bottom .news_title p {
+    color: #cc3333;
+    font-size: 13px;
+    font-weight: 300;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    line-height: 31px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #cc3333;
+
+}
+
+.bottom .news_txt {
+    display: flex;
+}
+
+.bottom .news_txt .txt {
+    flex: 1;
+}
+
+.bottom .news_txt h5 {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+.bottom .news_txt p:nth-child(2) {
+    font-size: 15px;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.5;
+    height: 6.0;
+    /* 3라인을 자르기 때문에 height는 1.5 * 3 = 4.5 */
+}
+
+.bottom .news_txt p:nth-child(3) {
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.bottom .news_txt .txt~.txt {
+    margin-left: 40px;
+}
+
+
+.bottom .news_txt .txt~.txt::before {
+    content: "";
+    width: 1px;
+    height: 200px;
+    background: #ddd;
+    z-index: 999;
+}
+
+/* 2022.06.29. tae family_banner */
+
+.family_banner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
+}
+
+.family_link {
+    display: flex;
+    gap: 30px;
+}
+
+.family_link figure {
+    position: relative;
+}
+
+.family_link .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* a영역을 확장해주고싶은데 안됨.. */
+.family_link .text>a {
+    display: block;
+}
+
+/* 2022.06.29. tae service button */
+
+.service {
+    padding: 0 0 40px 0;
+}
+
+.service .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.service .service_btn {
+    display: flex;
+    gap: 30px;
+}
+
+.service .s_button a {
+    display: flex;
+    justify-content: space-between;
+    width: 277.5px;
+    height: 40px;
+    border: 1px solid #999;
+    padding: 10px 10px;
+}
+
+.service .s_button:nth-child(4) a {
+    border: 1px solid #cc3333;
+}
+
+.service .s_button:nth-child(4) a i {
+    color: #cc3333;
+}
+
+.service .s_button:nth-child(4)>a>p {
+    color: #cc3333;
+}
+
+.service .s_button>a>p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #222;
+}
+
+/* 2022.06.29. tae footer */
+
+#footer {
+    background: #333;
+}
+
+#footer .top {
+    padding: 40px;
+}
+
+#footer .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .container .footer_left {
+    position: relative;
+    margin: 0 30px 0 0;
+}
+
+/* #footer .container .footer_left::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 110px;
+    margin: 0 -40px 0 0;
+    background: #555;
+} */
+
+
+#footer .footer_logo {
+    margin: 0 0 20px 0;
+}
+
+#footer .footer_logo img {
+    width: 170px;
+}
+
+#footer .container .sns {}
+
+#footer .container .sns p {
+    color: #888;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 15px 0;
+}
+
+#footer .container .sns i {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 5px 0 0;
+}
+
+#footer .container .list_sitemap dl {
+    display: flex;
+    gap: 15px;
+    margin: 0 0 10px 0;
+}
+
+#footer .container .list_sitemap dd {
+    color: #999;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#footer .container .list_sitemap dt {
+    color: #999;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#footer .footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+#footer .family_site {
+    margin: 0 0 0 auto;
+}
+
+
+#footer .family_site select {
+    background: transparent;
+    color: rgb(210, 210, 210);
+    padding: 0 15px;
+    border: 1px solid #555;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#footer .family_site option {
+    color: #fff;
+    background: #333;
+}
+
+.footer_right dt::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #666;
+    margin: 0 0 0 15px;
+}
+
+.footer_right dd~dd::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #666;
+    margin: 0 15px 0 0;
+}
+
+#footer .container .list_sitemap p {
+    color: #999;
+    font-size: 15px;
+    font-weight: 300;
+}

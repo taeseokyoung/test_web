@@ -1,0 +1,172 @@
+/* * {
+    outline: 1px solid #f00;
+} */
+
+img {
+    max-width: 100%;
+}
+
+.Wrap {}
+
+#header {
+    /* display: block; */
+}
+
+#header .container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#header .container .navWrap {
+    width: 1200px;
+    line-height: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+#header .navWrap h1 #header .navWrap a {
+    padding: 0 auto 0 0;
+}
+
+.navWrap .headerTab {
+    display: flex;
+}
+
+#header .headerTab ul {
+    display: flex;
+    gap: 40px;
+}
+
+#header .headerTab ul>li {
+    font-size: 17px;
+    font-weight: 500px;
+    color: #ddd;
+}
+
+#header .headerTab .headerArea {
+    /* a태그 사이에 마진을 줬다. */
+    font-size: 13px;
+    font-weight: 300px;
+    color: #ddd;
+}
+
+#header .headerTab .headerArea::before {
+    content: "";
+    display: inline-block;
+    /* 2. 왜 li-a 와 그냥 a 간격이 다를까 속성에 차이가 있는거 같다 */
+    margin: 0 20px;
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+    vertical-align: middle;
+}
+
+#header .container .headerTab .headerArea::after {
+    content: "";
+    display: inline-block;
+    /* 윗 마진이 안먹는다 아래마진은 먹는다. 중간으로 더 맞춰주고 싶은데 잘 모르겠다..*/
+    /* margin: 30px 20px 0 20px; */
+    margin: 0 20px;
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+    vertical-align: middle;
+}
+
+#header .container .headerTab .headerArea a~a {
+    margin: 0 0 0 30px;
+
+}
+
+#header button {
+    border: none;
+    background: transparent;
+    color: #ddd;
+    font-size: 23px;
+
+}
+
+#header button i {
+    vertical-align: -13%;
+}
+
+#main .main_slider figure {
+    height: 970px;
+}
+
+#main .main_slider .itm01 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+#main .main_slider .itm02 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+#main .main_slider .itm03 {
+    background: url(../img/visual04.jpg) no-repeat center center/cover;
+}
+
+#main .scrollMe {
+    padding: 100px 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main .scrollMe h3 {
+    font-size: 45px;
+    font-weight: 700;
+    padding: 0 0 20px 0;
+}
+
+#main .scrollMe>p {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+}
+
+.scrollMe .scrollme {
+    display: flex;
+    gap: 30px;
+}
+
+.scrollMe .scrollme figure {}
+
+.scrollMe .scrollme figure:nth-child(1) {
+    margin: 200px 0 0 0;
+}
+
+.scrollMe .scrollme figure:nth-child(2) {
+    margin: 100px 0 0 0;
+}
+
+.scrollMe .scrollme figure img {
+    padding: 0 0 10px 0;
+}
+
+.scrollMe .scrollme .text h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.scrollMe .scrollme .text p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#main .businessSlider {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.businessSlider figure {
+    padding: 0 15px;
+}
+
+.businessSlider figure .slide01 {
+    display: flex;
+}

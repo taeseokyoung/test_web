@@ -1,0 +1,458 @@
+/* 범용 */
+@font-face {
+    font-family: Galaxi;
+    src: url("../fonts/GalaxieCassiopeiaBasic-Bold.eot");
+    src: url("../fonts/GalaxieCassiopeiaBasic-Bold.eot?#iefix") format("embedded-opentype"), url(../fonts/GalaxieCassiopeiaBasic-Bold.woff) format("woff"), url(../fonts/GalaxieCassiopeiaBasic-Bold.ttf) format("truetype"), url(../fonts/GalaxieCassiopeiaBasic-Bold.svg#DroidSansRegular) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --mc: 96, 174, 43;
+}
+
+/* --mc: #60ae2b;  */
+
+/* * { outline: 1px solid #f00;} */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    font-family: Galaxi;
+    font-size: 31px;
+}
+
+
+/* 22.07.06 header */
+header .container {
+    display: flex;
+    line-height: 100px;
+    justify-content: space-between;
+}
+
+.container h1 img {
+    width: 250px;
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.gnb>li>a {
+    display: block;
+    font-size: 17px;
+    font-weight: 700px;
+}
+
+
+/* 22.07.06 main */
+/* 22.07.06 main_visual */
+.main_visual {
+    position: relative;
+}
+
+.main_visual figure {
+    height: 90vh
+}
+
+.main_visual .main_slider .itm01 {
+    background: url(../img/main_visual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .itm02 {
+    background: url(../img/main_visual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .itm03 {
+    background: url(../img/main_visual03.jpg) no-repeat center center/cover;
+}
+
+/* 22.07.08 findme */
+.main_visual .findme {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.main_visual .findme .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 150px;
+}
+
+.main_visual .findme p {
+    margin: 0 30px 0 0;
+    font-family: Galaxi;
+    font-size: 27px;
+    color: #fff;
+}
+
+select,
+input.store {
+    width: 275px;
+    height: 50px;
+}
+
+.search_btn {
+    text-align: right;
+    border: 1px solid #333;
+    background: rgba(var(--mc));
+    color: #fff;
+    line-height: 50px;
+    padding: 0 47px;
+}
+
+
+/* 22.07.06 main_begins slide */
+.main_begins {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main_begins p:nth-child(1) {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: rgba(var(--mc));
+}
+
+.main_begins p:nth-child(3) {
+    margin: 0 0 30px 0;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.main_begins .container {
+    position: relative;
+}
+
+.begins_slider figure {
+    height: 400px;
+}
+
+.begins_slider .begins01 {
+    background: url(../img/begins01.jpg) no-repeat center center/cover;
+}
+
+.begins_slider .begins02 {
+    background: url(../img/begins03.jpg) no-repeat center center/cover;
+}
+
+.begins_slider .begins03 {
+    background: url(../img/begins02.jpg) no-repeat center center/cover;
+}
+
+.begins_arrow i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    color: rgba(var(--mc));
+    font-size: 50px;
+}
+
+.begins_arrow i:nth-of-type(1) {
+    margin: 0 0 0 -640px;
+}
+
+.begins_arrow i:nth-of-type(2) {
+    margin: 0 0 0 640px;
+}
+
+/* 22.07.06 main_menu */
+.main_menu {
+    position: relative;
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(var(--mc), 0.5);
+}
+
+.main_menu .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.main_menu .container img {
+    border-radius: 3%;
+}
+
+.main_menu .cmenu {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.main_menu .cmenu figure:hover img {
+    opacity: 0;
+}
+
+
+
+
+/* 2022.07.07 tae fixed_bg */
+.fixed_bg {
+    position: relative;
+    color: #fff;
+}
+
+.fixed_bg .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+}
+
+h2 {
+    margin: 0 0 25px 0;
+}
+
+.fixed_bg .container>ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.fixed_bg .container>ul>li>a {
+    padding: 5px 25px;
+    border: 1px solid #ddd;
+    background: rgba(35, 35, 35, 0.1);
+}
+
+.fixed_bg .container>ul>li>a:hover {
+    border: 1px solid rgba(var(--mc));
+    background: rgba(var(--mc));
+}
+
+.fixed_bg .container>ul>li>a {
+    display: block;
+}
+
+.fixed_bg figure {
+    padding: 125px 0;
+    background: url(../img/fx_delivery.jpg) no-repeat fixed center center/cover;
+    filter: brightness(70%);
+}
+
+/* 2022.07.07 tae main_brand */
+.main_brand {
+    display: block;
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main_brand p:nth-child(1) {
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    color: rgba(var(--mc));
+}
+
+.main_brand p:nth-child(3) {
+    margin: 0 0 30px 0;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.main_brand .container {
+    position: relative;
+}
+
+.main_brand .brand_tab {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 30px;
+}
+
+.main_brand .brand_tab {
+    visibility: hidden;
+}
+
+.main_brand .brand_tab.on {
+    visibility: visible;
+}
+
+.main_brand .brand_tab figure {
+    position: relative;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(var(--mc));
+    width: 250px;
+    height: 70px;
+    line-height: 1.3;
+    font-size: 17px;
+    color: #fff;
+}
+
+.main_brand .brand_title li {
+    display: flex;
+    position: absolute;
+    right: 470px;
+    display: flex;
+    gap: 10px;
+    align-items: top;
+    line-height: 1.2;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.main_brand .brand_title li::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 120px;
+    background: #ddd;
+}
+
+.main_brand .brand_title li.on::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 120px;
+    background: rgba(var(--mc));
+}
+
+.main_brand .brand_title li.on {
+    display: flex;
+    position: absolute;
+    right: 470px;
+    display: flex;
+    gap: 10px;
+    align-items: top;
+    line-height: 1.2;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(var(--mc));
+}
+
+.brand_title li:nth-child(2) {
+    top: 391px;
+    right: 485px;
+}
+
+.brand_title li.on:nth-child(2) {
+    top: 391px;
+    right: 485px;
+    color: rgba(var(--mc));
+}
+
+.brand_title li:nth-child(3) {
+    top: 531px;
+    right: 477px;
+}
+
+.brand_title li.on:nth-child(3) {
+    top: 531px;
+    right: 477px;
+    color: rgba(var(--mc));
+}
+
+/* a태그 figcaption태그 line height 안됨??? */
+
+/* 2022.07.07 tae move_icon */
+.move_icon {
+    padding: 415px 0 0 0;
+}
+
+.move_icon .moving {
+    width: auto;
+    height: 50px;
+    background: url(../img/ss_masking.jpg) 0 center / 280px repeat-x;
+    animation: mvicon 2s linear infinite;
+    object-fit: cover;
+}
+
+@keyframes mvicon {
+    0% {
+        background-position: 0 center;
+    }
+
+    100% {
+        background-position: 280px center;
+    }
+}
+
+/* 2022.07.07 tae footer */
+.footer {
+    padding: 80px;
+    background: #333;
+    font-size: 13px;
+    color: #999;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footer_left a {
+    display: block;
+    margin: 0 0 80px 0;
+}
+
+.footer .footer_left p:nth-of-type(1) {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+}
+
+.footer .footer_left p:nth-of-type(2) {
+    line-height: 1.3;
+    font-size: 11px;
+}
+
+
+.footer .footer_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer .footer_right .footer_list {
+    display: flex;
+    gap: 80px;
+}
+
+.footer .footer_right dl {
+    line-height: 1.8;
+}
+
+.footer .footer_right dt {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer_right .sns {
+    text-align: right;
+    font-size: 20px;
+}
+
+.footer_right .sns a~a {
+    margin: 0 0 0 5px;
+}
