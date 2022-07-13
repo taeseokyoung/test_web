@@ -1,6 +1,159 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* * {
+    outline: 1px solid #f00;
+} */
+
+body {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1800px;
+    margin: 0 auto;
+}
 
 .header {
-    font-family: Open-Sans;
+    padding: 60px;
+}
+
+.header .header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background: #000;
+}
+
+.header .header_fixed.on .header_top {
+    display: none;
+}
+
+header .container {
+    padding: 15px 0;
+    color: #767676;
+}
+
+header .header_top {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin: 0 0 20px 0;
+}
+
+header .header_top .left {
+    display: flex;
+    align-items: center;
+}
+
+header .header_top .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .header_top .right .r_left a~a {
+    margin: 0 0 0 15px;
+}
+
+header .header_top .right .r_left::after {
+    content: "";
+    border-left: 1px solid #767676;
+    margin: 0 0 0 20px;
+}
+
+header .header_top .right .r_right {
+    display: flex;
+    gap: 15px;
+    vertical-align: middle;
+}
+
+header .header_top .right .r_right .search {
+    position: relative;
+    display: block;
+}
+
+header .header_top .right .r_right .search i {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+header .header_top .right .r_right a {
+    display: block;
+    font-size: 20px;
+}
+
+
+header .header_top .right input {
+    width: 200px;
+    border: inherit;
+    background: inherit;
+    border-bottom: 1px solid #767676;
+    color: #767676;
+}
+
+header .header_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+header .header_bottom h1 img {
+    max-width: 600px;
+}
+
+
+header .gnb {}
+
+
+
+header .gnb>ul {
+    display: flex;
+    gap: 50px;
+}
+
+header .gnb>ul>li {
+    position: relative;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+header .gnb>ul>li>a {
+    align-items: flex-end;
+    text-align: end;
+}
+
+header .gnb .multimenu_head {
+    overflow: hidden;
+}
+
+header .gnb .smenu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.main {}
+
+.main_visual {
+    height: 90vh;
 }
