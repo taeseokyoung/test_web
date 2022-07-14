@@ -16,80 +16,79 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    padding: 60px;
-}
 
-.header .header_fixed {
+/* 2022 07 12 header title */
+
+header .title {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
     width: 100%;
+    z-index: 999;
+}
+
+.title .tit_top {
+    width: 100%;
+    height: auto;
     background: #000;
-}
-
-.header .header_fixed.on .header_top {
-    display: none;
-}
-
-header .container {
-    padding: 15px 0;
+    font-size: 15px;
     color: #767676;
 }
 
-header .header_top {
+header .title.on .tit_top {
+    display: none;
+}
+
+.title .tit_top .container {
     display: flex;
     justify-content: space-between;
-    width: auto;
-    margin: 0 0 20px 0;
+    line-height: 40px;
 }
 
-header .header_top .left {
-    display: flex;
-    align-items: center;
+header .title .tit_top .left {
+    font-weight: 700;
 }
 
-header .header_top .right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-header .header_top .right .r_left a~a {
-    margin: 0 0 0 15px;
-}
-
-header .header_top .right .r_left::after {
-    content: "";
-    border-left: 1px solid #767676;
-    margin: 0 0 0 20px;
-}
-
-header .header_top .right .r_right {
+.title .tit_top .right {
+    position: relative;
     display: flex;
     gap: 15px;
-    vertical-align: middle;
+    font-weight: 500;
 }
 
-header .header_top .right .r_right .search {
+.title .tit_top .right .r_left a~a {
+    padding: 0 0 0 15px;
+}
+
+.title .tit_top .right .r_right {
+    display: flex;
+    gap: 15px;
+}
+
+.title .tit_top .right .r_right::before {
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: #444444;
+    margin: 14px 0 0 0;
+}
+
+.title .tit_top .right .r_right .search {
     position: relative;
-    display: block;
 }
 
-header .header_top .right .r_right .search i {
+.title .tit_top .right .r_right .search i {
     position: absolute;
     right: 5px;
-    bottom: 5px;
+    bottom: 15px;
 }
 
-header .header_top .right .r_right a {
-    display: block;
+.title .tit_top .right .r_right a {
+    padding: 3px 0 0 0;
     font-size: 20px;
 }
 
-
-header .header_top .right input {
+.title .tit_top .right .r_right input {
     width: 200px;
     border: inherit;
     background: inherit;
@@ -97,63 +96,205 @@ header .header_top .right input {
     color: #767676;
 }
 
-header .header_bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    gap: 50px;
+
+header .title.on .tit_bottom {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
 }
 
-header .header_bottom h1 img {
-    max-width: 600px;
+.title .tit_bottom {
+    width: 100%;
+    height: auto;
+    line-height: 70px;
+    background: #000;
 }
 
-
-header .gnb {}
-
-
-
-header .gnb>ul {
-    display: flex;
-    gap: 50px;
-}
-
-header .gnb>ul>li {
-    position: relative;
-    font-size: 27px;
-    font-weight: 700;
-}
-
-header .gnb>ul>li>a {
-    align-items: flex-end;
-    text-align: end;
-}
-
-header .gnb .multimenu_head {
-    overflow: hidden;
-}
-
-header .gnb .smenu {
+.title .tit_bottom::before {
+    content: "";
     position: absolute;
-    top: 50px;
+    top: 90px;
     left: 0;
     width: 100%;
     height: 0;
-    font-size: 13px;
+    background: #fff;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.title .tit_bottom:hover::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    z-index: -1;
+}
+
+.title.on .tit_bottom:hover::before {
+    border-top: 1px solid #ddd;
 }
 
 
 
+/* 수정 : justify 지우고 장바구니, search 갖다놔보기 */
+.title .tit_bottom .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
 
+.title .tit_bottom h1 {
+    position: relative;
+    align-items: center;
+    vertical-align: middle;
+}
 
+/* 화이트 바탕 로고 */
+.title .tit_bottom h1 a:nth-child(1) {
+    visibility: hidden;
+}
 
+.title.on .tit_bottom h1 a:nth-child(1) {
+    visibility: visible;
+}
 
+/* 블랙 바탕 로고 */
+.title .tit_bottom h1 a:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    align-items: center;
+    vertical-align: middle;
+}
 
+.title.on .tit_bottom h1 a:nth-child(2) {
+    display: none;
+}
 
+.title .tit_bottom img {
+    padding: 20px 0;
+}
 
+.title .tit_bottom .gnb>ul {
+    /* align-items: flex-end;*/
+    /* vertical-align: bottom;*/
+    /* text-align: end; */
+    /* margin-top: auto; */
+    /* align-items: center; */
+    /* padding: 27px; */
+    padding: 20px 0 0 0;
+    display: flex;
+    gap: 30px;
+}
 
+.title .tit_bottom .gnb>ul>li {
+    /* vertical-align: bottom;
+    text-align: end; */
+    position: relative;
+    font-size: 27px;
+    font-weight: 700;
+    padding: 0 20px;
+
+}
+
+.title .tit_bottom .gnb>ul>li>a {
+    /* display: block;
+       */
+    color: #767676;
+}
+
+.title.on .tit_bottom .gnb>ul>li>a {
+    /* display: block;
+       */
+    color: #767676;
+}
+
+.title .tit_bottom .gnb>ul>li>a:hover {
+    color: #ddd;
+}
+
+.title.on .tit_bottom .gnb>ul>li>a:hover {
+    color: #000;
+}
+
+.title .tit_bottom .gnb .smenu {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    height: 0;
+    width: 100%;
+    height: 0;
+    padding: 0 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.title .tit_bottom:hover .gnb .smenu {
+    height: 200px;
+}
+
+.title .tit_bottom .gnb .smenu li {
+    /* white-space: nowrap; */
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000;
+}
+
+.title.on .tit_bottom .gnb .smenu li {
+    /* white-space: nowrap; */
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #767676;
+}
+
+/* 2022 07 12 main_visual */
 .main {}
 
 .main_visual {
-    height: 90vh;
+    height: 100vh;
+}
+
+/* 2022 07 14 main_product */
+.main_product {
+    padding: 200px 0;
+    width: 100%;
+    background-color: #000;
+}
+
+.main_product .product_txt h2 {
+    margin: 0 0 30px 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.main_product .product_img {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.main_product .product_img figure:last-child {
+    width: 880px;
+    height: 100%;
+    padding: 5px;
+    /* object-fit: 안먹혔음.. */
+}
+
+/* 2022 07 14 main_slogan */
+.main_slogan {
+    background: #000;
+}
+
+.main_slogan h2 {
+    font-size: 90px;
+    font-weight: 700;
+    color: #444;
 }
