@@ -22,8 +22,16 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: true,
+
+
         pauseOnFocus: true,
     });
+
+    $('.attraction_slide .slide_cover').slick({
+        arrows: false,
+        slidesToShow: 4,
+    });
+
 
     $('').on('click', function () {
 
