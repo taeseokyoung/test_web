@@ -30,7 +30,7 @@
                     <li>KOR</li>
                 </ul>
             </div>
-            <nav class="gnb on">
+            <nav class="gnb">
                 <ul class="gLeft">
                     <li>
                         <a href="">캐비스토리</a>
@@ -84,7 +84,7 @@
     <main>
         <!-- 20220726. tae main_visual  -->
         <section class="main_visual">
-            <div class="main_video"></div>
+            <div class="main_video" id="player"></div>
         </section>
         <!-- 20220726. tae main_visual  -->
 
@@ -307,5 +307,53 @@
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/jquery.mb.YTPlayer.min.js"></script>
     <script src="../assets/js/slick.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main copy.js"></script>
+    <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var section = {
+            start: 0, // 반복 시작 시간(초)
+            end: 50 // 반복 종료 시간(초)
+        };
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player(
+                'player', {
+                height: '110%',
+                width: '100%',
+                playerVars: { 'autoplay': 1, 'controls': 0, 'mute': 1 },
+                videoId: 'nnVOr1CzozY', // 영상 고유 주소
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            }
+            );
+        }
+
+        function onPlayerReady(event) {
+            player.seekTo(section.start);
+            player.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                var duration = section.end - section.start;
+                setTimeout(restartVideoSection, duration * 1000);
+            }
+        }
+
+        function restartVideoSection() {
+            player.seekTo(section.start);
+        }
+    </script>
 </body>
