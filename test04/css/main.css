@@ -692,13 +692,16 @@ body {
         transition: 0.5s;
     }
 
+
     .gnb>ul>li:hover .smenu {
+        display: none;
         height: 200px;
         background: #fff;
         border: 1px solid #ddd;
     }
 
     .gnb>ul>li:hover .smenu {
+        display: none;
         background: #fff;
     }
 
