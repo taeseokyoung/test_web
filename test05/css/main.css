@@ -1,0 +1,70 @@
+* {
+    outline: 1px solid #0f0;
+    letter-spacing: -0.025em;
+}
+
+:root {
+    --mc: #c70101;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.Header .gnb_top {
+    line-height: 50px;
+    background: var(--mc);
+    color: #fff;
+}
+
+.gnb_top .right {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.gnb h1 img {
+    width: 75px;
+    height: 75px;
+}
+
+.gnb {
+    line-height: 100px;
+    background: #000;
+}
+
+.gnb .container>ul {
+    display: flex;
+    gap: 30px;
+    color: #fff;
+}
+
+.gnb .container ul>li>a {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.gnb .container ul>li>ul {
+    display: none;
+}
+
+
+.main_visual .main_slider figure {
+    height: calc(100vh - 150px)
+}
+
+.main_visual .main_slider .main01 {
+    background: url(../img/main01.jpg)no-repeat center center/cover;
+}
+
+.main_visual .main_slider .main02 {
+    background: url(../img/main02.jpg)no-repeat center top/cover;
+}
+
+.main_visual .main_slider .main03 {
+    background: url(../img/main03.jpg)no-repeat center center/cover;
+}
+
+.main_slider .slick_dots {}
