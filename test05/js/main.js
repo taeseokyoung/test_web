@@ -9,7 +9,8 @@ $(function () {
         arrows: false,
         centerPadding: '30px',
         variableWidth: true,
-        slidesToShow: 3
+        slidesToShow: 3,
+        slidesToScroll: 3,
         // responsive: [
         //     {
         //         breakpoint: 768,
