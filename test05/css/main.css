@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-    font-size: 37px;
+    font-size: 45px;
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
@@ -104,7 +104,7 @@ h5 {
 
 .gnb .container ul>li>a {
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .gnb .container ul>li>ul {
