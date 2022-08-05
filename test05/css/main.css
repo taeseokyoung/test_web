@@ -619,8 +619,7 @@ h5 {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
     border-top: 1px solid #333;
 }
