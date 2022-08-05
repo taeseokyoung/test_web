@@ -9,6 +9,10 @@
     --dc: #000;
 }
 
+.wrap {
+    overflow-x: hidden;
+}
+
 .container {
     display: flex;
     width: 1200px;
@@ -617,7 +621,7 @@ h5 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 2000px;
+    width: 100%;
     border-top: 1px solid #333;
 }
 
