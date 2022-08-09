@@ -101,20 +101,33 @@ h5 {
 }
 
 .gnb .container>ul {
+    position: relative;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     color: #fff;
 }
 
 .gnb .container ul>li>a {
     font-size: 17px;
     font-weight: 300;
+    text-align: center;
 }
 
-.gnb .container ul>li>ul {
-    display: none;
+.gnb .container .smenu {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 10px 50px;
+    background: #000;
+    white-space: nowrap;
 }
 
+.gnb .container .smenu>li {
+    font-size: 15px;
+    color: #ddd;
+}
 
 .main_visual .main_slider figure {
     position: relative;
