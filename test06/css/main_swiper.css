@@ -51,7 +51,7 @@
 .swiper-container {
     width: 2430px;
     height: 780px;
-    margin: 0 0 0 63px;
+    /* margin: 0 0 0 63px; */
 }
 
 /* .swiper-container .swiper-wrapper{

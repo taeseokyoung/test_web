@@ -1,20 +1,24 @@
+/* setting */
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
+html {
+    font-size: 10px;
     font-family: 'Lato', sans-serif;
+}
+
+.body {
+    font-size: 1.6rem;
 }
 
 :root {
     --bl: #dddddd;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
+/* css */
 
-.inner {
-    width: 1170px;
+.container {
+    width: 120rem;
     margin: 0 auto;
 }
 
@@ -33,35 +37,111 @@
 }
 
 .Header .bottom {
+    position: relative;
     line-height: 50px;
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     border-bottom: 1px solid var(--bl);
 }
 
-.Header .bottom .gnb>ul {
+.Header .gnb>ul {
     display: flex;
     gap: 30px;
     justify-content: space-between;
 }
 
-.swiper-container .swiper-wrapper>div {
-    /* max-width: 1200px; */
-    height: calc(100vh - 162px);
-    gap: 30px;
+.gnb>ul>li {
+    position: relative;
 }
 
-.swiper-container .swiper-wrapper .main01 {
+.gnb>ul>li::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: var(--bl);
+    z-index: 999;
+    transition: 1s;
+}
+
+.gnb>ul>li.on::before {
+    width: 100%;
+}
+
+.gnb .multimenu {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    height: 260px;
+    z-index: 999;
+    background: #fff;
+}
+
+/* 다단메뉴 폰트사이즈 */
+.gnb>ul>li>a {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.gnb .multimenu a {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.gnb .multimenu .smenu a {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.multimenu .container {
+    display: flex;
+    height: 260px;
+    justify-content: space-between;
+}
+
+
+.gnb .multimenu .smenu {
+    line-height: 2;
+}
+
+
+
+
+.main {
+    overflow-x: hidden;
+}
+
+.MainVisual {}
+
+.MainVisual .mainSlider {}
+
+.MainVisual .mainSlider figure {
+    height: 780px;
+}
+
+/* slick에 margin 줄 때 */
+.slick-list {
+    margin: 0 -15px;
+}
+
+.slick-slide {
+    margin: 0 15px;
+}
+
+.MainVisual .mainSlider .main01 {
     background: url(../img/main_visual01.jpg) no-repeat center center/cover;
 }
 
-.swiper-container .swiper-wrapper .main02 {
+.MainVisual .mainSlider .main02 {
     background: url(../img/main_visual02.jpg) no-repeat center center/cover;
 }
 
-.swiper-container .swiper-wrapper .main03 {
+.MainVisual .mainSlider .main03 {
     background: url(../img/main_visual03.jpg) no-repeat center center/cover;
 }
 
-.swiper-container .swiper-wrapper .main04 {
+.MainVisual .mainSlider .main04 {
     background: url(../img/main_visual04.jpg) no-repeat center center/cover;
 }
