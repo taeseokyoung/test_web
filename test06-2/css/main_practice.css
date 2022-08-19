@@ -50,12 +50,19 @@ p {
     text-align: center;
     line-height: 100px;
     font-size: 0;
+    border-bottom: 1px solid var(--gl);
 }
+
+.Header .top .container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .Header .Gnb {
     line-height: 50px;
     padding: 5px 0 0 0;
-    background: var(--bc);
+    border-bottom: 1px solid var(--gl);
 }
 
 .Gnb .container {
@@ -127,7 +134,7 @@ p {
 .Gnb .tit {
     font-size: 1.8rem;
     font-weight: 400;
-    color: #fff;
+    color: var(--bc);
 }
 
 .Gnb .stit {
