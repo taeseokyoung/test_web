@@ -29,7 +29,8 @@ body {
 }
 
 h1 img {
-    max-width: 160px;
+    max-width: 150px;
+    font-size: 0;
 }
 
 h2 {
@@ -49,7 +50,6 @@ p {
 .Header .top {
     text-align: center;
     line-height: 100px;
-    font-size: 0;
     border-bottom: 1px solid var(--gl);
 }
 
@@ -58,20 +58,41 @@ p {
     justify-content: space-between;
 }
 
+.Header i {
+    font-size: 17px;
+    margin-left: 10px;
+}
 
 .Header .Gnb {
     line-height: 50px;
-    padding: 5px 0 0 0;
     border-bottom: 1px solid var(--gl);
 }
 
-.Gnb .container {
+.Gnb .menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Gnb .menu>li>a {
     position: relative;
 }
 
-.Gnb .menu {
-    display: flex;
-    justify-content: space-between;
+.Gnb .menu>li>a::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(221, 221, 221, 0);
+    z-index: 999;
+    transition: 1s;
+}
+
+
+.Gnb .menu>li>a.on::before {
+    background: var(--bc)
 }
 
 /* 인라인 요소들은 높이를 줘도 흘러넘쳐있다. overflow hidden.. 이제 기억할꺼지..? */
@@ -83,7 +104,6 @@ p {
     left: 0;
     width: 100%;
     height: 0;
-    z-index: 999;
     background: #fff;
 }
 
@@ -91,21 +111,15 @@ p {
     overflow: hidden;
 }
 
-.Gnb .menu>li>a:hover+.smenu {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 51px;
-    left: 0;
-    width: 100%;
+.Gnb .menu>li:hover .smenu {
     height: 220px;
     z-index: 999;
-    background: #fff;
+
 }
 
 .Gnb .smenu::before {
     content: "";
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 0;
     right: 100%;
@@ -116,7 +130,7 @@ p {
 
 .Gnb .smenu::after {
     content: "";
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 0;
     left: 100%;
@@ -125,14 +139,13 @@ p {
     background: #fff;
 }
 
-.Gnb .menu>li>a:hover+.smenu::before,
-.Gnb .menu>li>a:hover+.smenu::after {
+.Gnb .menu>li:hover .smenu::before,
+.Gnb .menu>li:hover .smenu::after {
     height: 220px;
 }
 
 /* Gnb font-size */
 .Gnb .tit {
-    font-size: 1.8rem;
     font-weight: 400;
     color: var(--bc);
 }
@@ -146,7 +159,7 @@ p {
 .Gnb .smenu>li>ul>li {
     font-size: 1.3rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 .main {}
@@ -235,7 +248,7 @@ p {
 .Salon strong {
     font-size: 25px;
     margin: 0 0 30px 0;
-    color: #333;
+    color: var(--bc)
 }
 
 .Salon a {
@@ -259,6 +272,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: right;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -266,7 +280,6 @@ p {
     height: 400px;
     padding: 0 15px;
     background: #fff;
-    border-bottom: 1px solid var(--gl);
 }
 
 .room {
@@ -286,8 +299,13 @@ p {
     height: 400px;
     padding: 0 15px;
     background: #fff;
-    border-bottom: 1px solid var(--gl);
     z-index: 999;
+}
+
+.txt p {
+    margin: 0;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid var(--gl);
 }
 
 .Style {
@@ -406,7 +424,7 @@ p {
 footer {
     padding: 60px 0;
     color: #aaa;
-    background: #333;
+    background: var(--bc);
 }
 
 footer img {
