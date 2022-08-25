@@ -1,0 +1,26 @@
+.Main {
+    position: relative;
+    background: #166837;
+    height: 100vh;
+}
+
+.Main .main_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Main figure {
+    width: 800px;
+    height: 507px;
+}
+
+.Main .triangle {
+    background: url(../images/cornfield01.png);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.Main .beer {
+    background: url(../images/bear_main.png);
+}

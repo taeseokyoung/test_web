@@ -22,7 +22,8 @@ $(function () {
     });
 
     $('.mainSlider').on('afterChange', function (e, s, c) {
-        $('.gnb>.mainmenu>ul>li').eq(c).addClass('on').siblings().removeClass('on')
+        $('.Gnb .menu .tit').removeClass('on');
+        $('.Gnb .menu .tit').eq(c).addClass('on');
 
         // if ($('.mainSlider figure').hasClass('slick-center')) {
         //     var idx = $(this).index();
