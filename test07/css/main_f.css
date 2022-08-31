@@ -1,0 +1,391 @@
+h1 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+h1 a {
+    margin: 0 0 20px 0;
+}
+
+h1 span {
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 65px;
+    font-weight: 700;
+}
+
+strong {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.content {
+    width: 100vw;
+    margin: 0 auto;
+    gap: 100px;
+    /* overflow: hidden; */
+}
+
+.gnb {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.gnb ul>li {
+    width: 50px;
+}
+
+.gnb ul>li a {
+    position: relative;
+    display: block;
+    height: 10px;
+    font-size: 0;
+}
+
+.gnb ul>li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 50%;
+    height: 1px;
+    background: #333;
+    transition: width 0.5s;
+}
+
+.gnb ul>li.on a::after {
+    width: 100%;
+}
+
+.gnb ul>li a.w::after {
+    background: #333;
+}
+
+/* 우상단 버튼 */
+.coverBtn {
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    font-size: 0;
+}
+
+.coverBtn::before,
+.coverBtn::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 3px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.coverBtn::before {
+    top: 7px;
+}
+
+.coverBtn.on::before {
+    opacity: 0;
+}
+
+.coverBtn::after {
+    bottom: 7px;
+}
+
+.coverBtn.on::after {
+    opacity: 0;
+}
+
+.coverBtn button {
+
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+}
+
+.coverBtn button::before,
+.coverBtn button::after {
+    content: "";
+    position: absolute;
+    /* translate 쓰지 않고 이렇게 하면 가운데에 온다 */
+    top: calc(50% - 1px);
+    left: 5px;
+    right: 5px;
+    height: 3px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.coverBtn.on button::before {
+    transform: rotate(45deg);
+}
+
+.coverBtn.on button::after {
+    transform: rotate(-45deg);
+}
+
+section {
+    padding: 0 100px;
+}
+
+.main {
+    position: relative;
+    background: #00561f;
+}
+
+.main .pic figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 790px;
+}
+
+.main .pic figure:nth-child(4) {
+    top: calc(50% + 400px);
+    left: calc(50% - 200px);
+}
+
+
+.main .dec {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: flex;
+    gap: 130px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 400px);
+}
+
+.main h2 {
+    position: absolute;
+    bottom: calc(50% - 420px);
+    left: calc(50% + 50px);
+    font-size: 150px;
+    color: rgb(255, 255, 255, 0.2);
+}
+
+.main p {
+    color: #fff;
+}
+
+.page01 .content {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.page01 .pic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page01 .dec {
+    text-align: right;
+}
+
+.page02 .content {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.page02 .pic {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 0 30px 0;
+}
+
+.page02 .dec {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.page02 .dec div {
+    width: 410px;
+    height: 277px;
+}
+
+.page02 figure {
+    width: 410px;
+    height: 277px;
+    background: url(../images/mtriangle.png) no-repeat center center/cover;
+}
+
+.page02 strong {
+    display: inline-block;
+    margin: 0 0 30px 0;
+}
+
+.page02 p {
+    line-height: 1.4;
+}
+
+.page03 {
+    position: relative;
+}
+
+.page03 .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page03 .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.page03 .pic figure:first-child {
+    position: absolute;
+    top: 50%;
+    left: -250px;
+    width: 1200px;
+    height: 1090px;
+    transform: rotate(90deg) translateX(-50%);
+    background: url(../images/mbeer01.png) no-repeat center center/cover;
+}
+
+.page03 .right figure {
+    width: 1000px;
+    height: 500px;
+    background: url(../images/package.jpg) no-repeat center center/cover;
+    margin: 0 0 30px 0;
+}
+
+.page03 p {
+    top: 600px;
+    line-height: 1.4;
+}
+
+.page04 {}
+
+
+/* 변한곳에 transition을 줘야 한다.(on 붙인 곳) */
+
+/* 
+.section.on {
+    transition: 0.5s;
+}
+
+.section.on .pic {
+  
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+
+.section.on .dec {
+  opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.section.on h2{
+  opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+} */
+
+/* flex order */
+.portfolio01 .dec {
+    order: -1;
+}
+
+.portfolio02 {
+    background: url(../images/m01.jpg) no-repeat fixed center center/cover;
+}
+
+.copyright {
+    padding: 50px 0;
+    color: #fff;
+    background: #00561f;
+}
+
+.copyright .copy {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+.totop a {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    z-index: 999;
+}
+
+
+.contact {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
+    width: 400px;
+}
+
+.contact::before {
+    font-family: xeicon;
+    content: "\ea10";
+}
+
+.contact.on::before {
+    content: "\e921";
+}
+
+.contact .txt {
+    width: 0;
+    /* 박스에 갇혀서 아래로 쭉 떨어진 폰트 > 띄어쓰기 안하는거  */
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.contact.on .txt {
+    width: 200px;
+}
+
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #00561f;
+    overflow: hidden;
+    /* 인라인인 것들이 나와있어서? gnb의 번호들 */
+    transition: 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover.on {
+    height: 100vh;
+}
