@@ -20,7 +20,7 @@ section>p {
 }
 
 * {
-    /* outline: 1px solid #ddd; */
+    /* outline: 1px solid #f00; */
     color: #212529;
     letter-spacing: -0.025em;
 }
@@ -153,6 +153,22 @@ p {
     color: var(--mc);
 }
 
+.News .container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.News .container .right a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.News .container .right a>div {
+    flex: 1;
+}
+
 .Preview {
     height: 1070px;
     background: linear-gradient(#fff 60%, #e8e5e2 40%);
@@ -270,20 +286,48 @@ p {
     gap: 30px;
 }
 
+.News strong {
+    font-size: 16px;
+}
+
+.News .down p:nth-child(1) {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.News .down p:nth-child(2) {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .News .container>div {
     flex: 1;
 }
 
 .News .container .left {
+    position: relative;
     width: 585px;
     height: 585px;
     background: url(../images/ott.png) no-repeat center center/cover;
     padding: 30px;
 }
 
+.News .container .left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .News .container .up {
     display: flex;
     justify-content: space-between;
+
 }
 
 .News .container .down {
@@ -299,13 +343,11 @@ p {
 .News .container .right {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
 }
 
 .News .container .right a {
     height: 50%;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     border-bottom: 1px solid var(--mc);
 }
 
