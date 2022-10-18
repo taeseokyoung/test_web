@@ -29,7 +29,7 @@ body {
 }
 
 h1 img {
-    max-width: 150px;
+    max-width: 15rem;
     font-size: 0;
 }
 
@@ -190,7 +190,7 @@ p {
 } */
 
 .Salon {
-    padding: 150px 0;
+    padding: 15rem 0 10rem 0;
 
 }
 
@@ -283,7 +283,7 @@ p {
 }
 
 .room {
-    padding: 100px 0 0 0;
+    padding: 10rem 0 0 0;
 }
 
 .room .txt {
@@ -310,12 +310,12 @@ p {
 
 .Style {
     position: relative;
-    padding: 0 0 150px 0;
+    padding: 10rem 0;
 }
 
 .Style h2,
 .Style p {
-    text-align: right;
+    text-align: left;
 }
 
 .Style .container:nth-child(2) {
@@ -421,14 +421,84 @@ p {
     background: rgb(0, 0, 0, 0.8);
 }
 
+.Wedding {
+    background: #f7f7f7;
+    padding: 10rem 0;
+}
+
+.Wedding .container {
+    text-align: center;
+}
+
+.WeddingPhoto {
+    display: flex;
+    gap: 3rem;
+}
+
+.WeddingPhoto figure {
+    width: 38rem;
+    height: 50rem;
+}
+
+.wed01 {
+    background: url(../img/wed01.jpg) no-repeat center center/cover;
+}
+
+.wed02 {
+    background: url(../img/wed02.jpg) no-repeat center center/cover;
+}
+
+.wed03 {
+    background: url(../img/wed03.jpg) no-repeat center center/cover;
+}
+
+.Social {
+    padding: 10rem 0;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+
+.SocialPhoto .box {
+    width: 285px;
+    height: 365px;
+    background: #fff;
+}
+
+.SocialPhoto .box img {
+    width: 255px;
+    height: 255px;
+    margin: 1.5rem 0 0 1.2rem;
+}
+
+.SocialPhoto video {
+    margin: 1.5rem 0 0 0;
+}
+
+.soclaltit {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.soclaltit .stit {
+    font-size: 1.6rem;
+}
+
+.SocialPhoto .des {
+    font-size: 1.3rem;
+}
+
 footer {
-    padding: 60px 0;
+    padding: 6rem 0;
     color: #aaa;
     background: var(--bc);
 }
 
 footer img {
-    width: 150px;
+    width: 15rem;
 }
 
 footer .container ul li {

@@ -73,6 +73,14 @@ $(function () {
         touchMove: true
     });
 
+    $('.SocialPhoto').slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 4,
+    });
+
 })
 
 
