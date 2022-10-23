@@ -1,5 +1,4 @@
 $(function () {
-
     $('.match_slider .slick').on('init afterchange', function (e, s, c) {
         var current = $('.slick_center');
         current.addClass('on').siblings().removeClass('on');
@@ -8,9 +7,11 @@ $(function () {
     $('.match_slider .slick').slick({
         centerMode: true,
         arrows: false,
+        pauseOnHover: true,
+        pauseOnFocus: true,
         centerPadding: '30px',
         variableWidth: true,
-        slidesToShow: 3,
+        slidesToShow: 3
     });
 
     $('.main_slider').slick({
@@ -19,7 +20,7 @@ $(function () {
         pauseOnHover: true,
         pauseOnFocus: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
 
     });
 
@@ -35,6 +36,8 @@ $(function () {
         // verticalSwiping: true,
     });
 
+
+
     $('.highlight .slider_for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -46,12 +49,15 @@ $(function () {
     $('.highlight .slider_nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        centerPadding: '-15px',
         asNavFor: '.slider_for',
         arrows: false,
         dots: false,
         centerMode: true,
         focusOnSelect: true
     });
+
+
 
 });
 
