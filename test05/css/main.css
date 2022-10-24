@@ -339,15 +339,46 @@ h5 {
 }
 
 .highlight .slider_for iframe {
-    width: 1200px;
+    width: 100%;
     height: 675px;
-    /* margin: 0 auto 30px auto; */
+    margin: 0 auto 30px auto;
     /* padding: 0 15px; */
 }
 
+.highlight .slider_nav {}
+
 .highlight .slider_nav iframe {
-    width: 380px;
-    height: 214px;
+    width: 275px;
+    height: 100%;
+    margin: 0 10px;
+
+}
+
+.slideArrows button {
+    background: inherit;
+    border: inherit;
+}
+
+.slideArrows button i {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.slideArrows button:first-child {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 0 -620px;
+}
+
+.slideArrows button:last-child {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 0 620px;
 }
 
 /* .highlight .slider_for figure {

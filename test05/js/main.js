@@ -53,7 +53,7 @@ $(function () {
     });
 
     $('.highlight .slider_nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         centerPadding: '-15px',
         asNavFor: '.slider_for',
@@ -61,6 +61,17 @@ $(function () {
         dots: false,
         centerMode: true,
         focusOnSelect: true
+    });
+
+
+    $('.slideArrows button:first-child').on('click', function (e) {
+        e.preventDefault();
+        $('.slider_nav').slick('slickPrev');
+    });
+
+    $('.slideArrows button:last-child').on('click', function (e) {
+        e.preventDefault();
+        $('.slider_nav').slick('slickNext');
     });
 
 });
