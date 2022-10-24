@@ -547,6 +547,7 @@ h5 {
     width: 380px;
     height: 380px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .md figure::before {
