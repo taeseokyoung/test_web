@@ -57,8 +57,6 @@ $(function () {
         focusOnSelect: true
     });
 
-
-
 });
 
 
