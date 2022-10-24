@@ -1,4 +1,10 @@
+document.cookie = "safeCookie1=foo; SameSite=Lax";
+document.cookie = "safeCookie2=foo";
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
 $(function () {
+
+
     $('.match_slider .slick').on('init afterchange', function (e, s, c) {
         var current = $('.slick_center');
         current.addClass('on').siblings().removeClass('on');
