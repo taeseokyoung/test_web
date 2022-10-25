@@ -60,7 +60,16 @@ $(function () {
         arrows: false,
         dots: false,
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 
 
@@ -73,6 +82,22 @@ $(function () {
         e.preventDefault();
         $('.slider_nav').slick('slickNext');
     });
+
+
+    $('.mbtn').on('click', function () {
+        $('.gnb').toggleClass('on')
+        $('smenu').hide();
+    });
+
+    $('.gnb>.container>ul>li>a').on('click', function (e) {
+        if ($(window).width() < 769) {
+            e.preventDefault();
+            $('smenu').hide();
+            $(this).next().show();
+
+        }
+    })
+
 
 });
 
