@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+/* * {
+    outline: 1px solid #f00;
+} */
+
 :root {
     --mc: 96, 174, 43;
 }
@@ -252,6 +256,7 @@ h2 {
 .main_brand {
     display: block;
     position: relative;
+    height: 780px;
     padding: 100px 0;
     text-align: center;
 }
@@ -308,12 +313,20 @@ figcaption {
     color: #fff;
 }
 
+.main_brand .brand_title {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    flex-direction: column;
+    position: absolute;
+    bottom: 128px;
+    right: calc(50% - 725px)
+        /* transform: translateX(-50%); */
+}
+
 .main_brand .brand_title li {
     display: flex;
-    position: absolute;
-    right: 470px;
-    display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: top;
     line-height: 1.2;
     text-align: left;
@@ -339,20 +352,10 @@ figcaption {
 }
 
 .main_brand .brand_title li.on {
-    display: flex;
-    position: absolute;
-    right: 470px;
-    display: flex;
-    gap: 10px;
-    align-items: top;
-    line-height: 1.2;
-    text-align: left;
-    font-size: 15px;
-    font-weight: 500;
     color: rgba(var(--mc));
 }
 
-.brand_title li:nth-child(2) {
+/* .brand_title li:nth-child(2) {
     top: 391px;
     right: 485px;
 }
@@ -372,14 +375,12 @@ figcaption {
     top: 531px;
     right: 477px;
     color: rgba(var(--mc));
-}
+} */
 
 /* a태그 figcaption태그 line height 안됨??? */
 
 /* 2022.07.07 tae move_icon */
-.move_icon {
-    padding: 415px 0 0 0;
-}
+.move_icon {}
 
 .move_icon .moving {
     width: auto;
